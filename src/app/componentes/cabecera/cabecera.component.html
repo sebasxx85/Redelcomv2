@@ -1,0 +1,44 @@
+<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+  <div class="container-fluid">
+    <!--<a class="navbar-brand" href="#">Navbar</a>-->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01"
+      aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link" routerLink="home">Inicio
+            <span class="visually-hidden"></span>
+          </a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link enlaces " routerLink='/terminales'>Terminales de Pago</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link enlaces" routerLink='/promociones'>Promociones</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link enlaces" routerLink='/contacto'>Contacto</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Portal</a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" routerLink='/ingresar'>Ingresar</a>
+            <a class="dropdown-item" routerLink='/crear-cuenta'>Crear Cuenta</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" routerLink='/recuperar-password'>Recuperar Contraseña</a>
+          </div>
+        </li>
+          
+      </ul>
+    
+     <app-carrito
+     [usuarioHijoCarrito]="usuarioHijo" 
+     ></app-carrito>
+
+    </div>
+  </div>
+  
+</nav>
+

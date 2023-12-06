@@ -1,0 +1,52 @@
+<app-nav-admin class="fixed-top" >
+<p [ngStyle]="{'color' : color}"  *ngIf="!UserLogin">Usuario No autenticado</p>
+<p [ngStyle]="{'color' : color}"  *ngIf="UserLogin">Usuario autenticado</p>
+</app-nav-admin>
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-header">
+          Inicio de Sesión Administrador
+        </div>
+        <div class="card-body">
+
+          <form [formGroup]="inicioAdmin" (ngSubmit)="loginAdm()">
+
+            <div class="mb-3">
+              <label for="usuario" class="form-label">Usuario:</label>
+              <input type="text" class="form-control" id="usuario"
+                name="usuario"
+                placeholder="Ingrese su usuario" formControlName="usuario">
+            </div>
+            <div *ngIf="Usuario.invalid && (Usuario.dirty || Usuario.touched)"
+              class="text-danger">
+              <div *ngIf="Usuario.errors?.['required']">El Usuario es requerido.</div>
+              <div *ngIf="Usuario.errors?.['email']"> El formato no es correcto
+              </div>
+            </div>
+
+            <div class="mb-3">
+              <label for="password" class="form-label">Contraseña:</label>
+              <input type="password" class="form-control" id="password"
+                name="password"
+                placeholder="Ingrese su contraseña" formControlName="password">
+            </div>
+            <div *ngIf="Pass.invalid && (Pass.dirty || Pass.touched)"
+              class="text-danger">
+              <div *ngIf="Pass.errors?.['required']">El password es requerido.</div>
+              <div *ngIf="Pass.errors?.['minlength']">El password es demasiado
+                corto</div>
+            </div>
+
+            <div class="d-grid gap-2">
+              <button type="submit" class="btn btn-primary">Iniciar Sesión</button>
+            </div>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

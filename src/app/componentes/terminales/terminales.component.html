@@ -1,0 +1,62 @@
+<app-cabecera></app-cabecera>
+<app-api-node></app-api-node>
+<h1 class="text-center titulos">TERMINALES</h1>
+
+<h2 class="text-center subtitulos">Terminales R3</h2>
+<div class="container margen">
+  <div class="row">
+    <div class="col-md-3" *ngFor="let terminalMini of terminalesMini">
+      <div class="card ">
+        <h2 class="card-title nombre">{{ terminalMini.nombre }}</h2>
+        <h3 class="card-title nombre">#{{ terminalMini.id }}</h3>
+        <img [src]="terminalMini.image" class="card-img-top" alt="Card Image">
+        <div class="card-body">
+
+          <h3 class="card-text">{{ 'Precio: $'+ terminalMini.precioTerminal }}</h3>
+          <h3 class="card-text" *ngIf="terminalMini.stock > 10">{{'stock: ' + terminalMini.stock }}</h3>
+          <h3 class="card-text red-stock" *ngIf="terminalMini.stock <= 10">{{'stock: ' + terminalMini.stock }}</h3>
+
+          <p class="card-text">{{ terminalMini.descripcion }}</p>
+          <button type="button" class="btn btn-outline-danger bg-danger text-white boton" (click)="disMini(terminalMini.id)">-</button>
+          <button type="button" class="btn btn-outline-success boton" (click)="eventoComprar(terminalMini)">Agregar Carrito</button>
+          <button type="button" class="btn btn-outline-success bg-success text-dark boton" (click)="addMini(terminalMini.id)">+</button>
+          
+        </div>
+        <h2 class="contador text-center">Cantidad: {{terminalMini.contador}}</h2>
+      </div>
+    </div>
+  </div>
+</div>
+
+<h2 class="text-center subtitulos">Terminales Mini</h2>
+<div class="container margen">
+  <div class="row">
+    <div class="col-md-3" *ngFor="let terminal of terminalesR3">
+      <div class="card ">
+        <h2 class="card-title nombre">{{ terminal.nombre }}</h2>
+        <h3 class="card-title nombre">#{{ terminal.id }}</h3>
+        <img [src]="terminal.image" class="card-img-top" alt="Card Image">
+        <div class="card-body">
+
+          <h3 class="card-text">{{ 'Precio: $'+ terminal.precioTerminal }}</h3>
+          <h3 class="card-text" *ngIf="terminal.stock > 10">{{'stock: ' + terminal.stock }}</h3>
+          <h3 class="card-text red-stock" *ngIf="terminal.stock <= 10">{{'stock: ' + terminal.stock }}</h3>
+
+          <p class="card-text">{{ terminal.descripcion }}</p>
+          <button type="button" class="btn btn-outline-danger bg-danger text-white boton" (click)="disR3(terminal.id)">-</button>
+          <button type="button" class="btn btn-outline-success boton" (click)="eventoComprar(terminal)">Agregar Carrito</button>
+          <button type="button" class="btn btn-outline-success bg-success text-dark boton" (click)="addR3(terminal.id)">+</button>
+          
+        </div>
+        <h2 class="contador text-center">Cantidad: {{terminal.contador}}</h2>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="row">
+  <!--<button type="button" class="btn btn-outline-success" (click)="agregarTerminalComp()"
+  >Agregar Terminal</button> 
+</div>
+<!--<app-paginacion></app-paginacion> -->
+
+<app-footer></app-footer>

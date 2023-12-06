@@ -1,0 +1,15 @@
+.icono{
+    float: right;
+    align-content: center;
+    margin-top: 5px;
+    margin-left: 30px;
+    margin-right: 8px;
+    color: rgb(76, 221, 28);
+    
+}
+
+.icono:hover {
+    color: orange;
+    transition: 0.7s;
+  }
+

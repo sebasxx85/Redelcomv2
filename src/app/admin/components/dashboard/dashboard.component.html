@@ -1,0 +1,88 @@
+<app-nav-admin class="fixed-top"></app-nav-admin>
+
+<h1 class="text-center cabecera">Administrador</h1>
+
+<p [ngStyle]="{'color' : color}" *ngIf="UserLogin">Usuario No autenticado</p>
+<p [ngStyle]="{'color' : color}" *ngIf="!UserLogin">Usuario autenticado</p>
+<div *ngIf="UserLogin">
+    <p>Nombre: {{userData?.name}}</p>
+    <p>Nombre: {{userData?.lastName}}</p>
+    <p>Nombre: {{userData?.email}}</p>
+</div>
+
+
+<div class="container2">
+  <div class="container mt-3">
+    <h2 class="text-center">Mis Productos</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Categorías</th>
+          <th>Producto</th>
+          <th>FechaIngreso</th>
+          <th>Eliminar</th>
+          <th>Editar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let dato of tusDatos">
+          <td>{{ dato.id }}</td>
+          <td>{{ dato.producto}}</td>
+          <td>{{ dato.categoria }}</td>
+          <td>{{ dato.fecha }}</td>
+          <td> <button class="btn btn-danger">Delete</button> </td>
+          <td> <button class="btn btn-primary">Edit</button> </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="tabla"></div>
+
+  <div class="container mt-4">
+    <h2>Agregar Nuevo Producto</h2>
+
+    <td> <button class="btn btn-success" (click)="crearProd()">Agregar</button>
+    </td>
+  </div>
+
+  <div class="container mt-4">
+    <h2 class="text-center">Mis Terminales</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Stock</th>
+          <th>Precio Terminal</th>
+          <th>Descripcion</th>
+          <th>Eliminar</th>
+          <th>Editar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let terminal of TerminalesMini">
+          <td>{{ terminal.id}}</td>
+          <td>{{ terminal.nombre}}</td>
+          <td>{{ terminal.stock }}</td>
+          <td>{{ terminal.precioTerminal }}</td>
+          <td>{{ terminal.descripcion}}</td>
+          <td> <button class="btn btn-danger">Delete</button> </td>
+          <td> <button class="btn btn-primary">Edit</button> </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="tabla"></div>
+
+  <div class="container mt-4">
+    <h2>Agregar Terminal</h2>
+
+    <td> <button class="btn btn-success" (click)="crearProd()">Agregar</button>
+    </td>
+  </div>
+
+  <div class="espacio">
+  </div>
+</div>
+<app-footer-admin class="fixed-bottom"></app-footer-admin>

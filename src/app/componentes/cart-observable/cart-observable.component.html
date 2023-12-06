@@ -1,0 +1,14 @@
+
+<h2 class="text-center titulos">Carrito de compras</h2>
+<app-total> </app-total>
+<div>
+    <div class="row background">
+        <div class="col-md-2" *ngFor="let terminal of terminals; let i = index">
+          <div class="carrito">
+            <h2 class="card-title nombre">{{ terminal.nombre }}</h2>
+            <h3 class="card-title nombre">{{ terminal.descripcion }}</h3> 
+            <h3 class="card-title nombre">${{ terminal.precioTerminal }}</h3> 
+            <button type="button" class="btn btn-danger" (click)="onDeleteTerminal(i)">Borrar</button>
+        </div>
+    </div>    
+</div>

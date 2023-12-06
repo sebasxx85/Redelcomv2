@@ -1,0 +1,27 @@
+.margen{
+    margin-top: 50px;
+}
+
+.titulos{
+    margin-top: 50px;
+    font-size:xx-large
+}    
+
+.subtitulos{
+    margin-top: 50px;
+}
+
+.nombre{
+    margin-top: 5px;
+    margin-bottom: 15px;
+    margin-left: 20px;
+}
+
+.red-stock{
+    color: rgb(160, 16, 16);
+}
+
+.boton{
+    margin-left: 3px;
+    margin-right: 3px;
+}

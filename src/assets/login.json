@@ -1,0 +1,25 @@
+[
+    {
+        "message": "Autenticacion OK",
+        "id": "1",
+        "name": "Sebastian",
+        "lastname": "Sepulveda",
+        "email": "seba@gmail.com"
+    },
+
+    {
+        "message": "Autenticacion OK",
+        "id": "2",
+        "name": "Administrador",
+        "lastname": "Administrador",
+        "email": "admin@gmail.com"
+    },
+    
+    {
+        "message": "Autenticacion OK",
+        "id": "2",
+        "name": "Administrador2",
+        "lastname": "Administrador2",
+        "email": "admin2@gmail.com"
+    }
+]
