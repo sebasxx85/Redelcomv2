@@ -24,7 +24,8 @@ export class DashboardComponent implements OnInit, OnDestroy {
     private router: Router, 
     private servProductos: ProductosService,
     private serTerminales: TerminalesService,
-    private loginService: LoginService
+    private loginService: LoginService,
+    private prodService: ProductosService,
   ) { }
 
   ngOnDestroy(){
@@ -63,6 +64,11 @@ export class DashboardComponent implements OnInit, OnDestroy {
         }
       });
 
+  }
+
+  //Eliminar producto
+  eliminarProducto(id: number) {
+    this.prodService.eliminarProducto(id);
   }
 
 

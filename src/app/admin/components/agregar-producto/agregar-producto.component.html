@@ -22,8 +22,13 @@
               </div>
               <div class="mb-3">
                 <label for="categoria" class="form-label">Categoria:</label>
-                <input type="categoria" class="form-control" id="categoria" name="categoria" 
+                <input type="text" class="form-control" id="categoria" name="categoria" 
                 placeholder="Ingrese la categoria" formControlName="categoria">
+              </div>
+              <div class="mb-3">
+                <label for="fecha" class="form-label">Fecha:</label>
+                <input type="text" class="form-control" id="fecha" name="fecha" 
+                placeholder="YYYY-MM-DD" formControlName="fecha">
               </div>
               <div class="d-grid gap-2">
                 <button type="submit" class="btn btn-primary" [disabled]="agregarProducto.invalid">Agregar</button>

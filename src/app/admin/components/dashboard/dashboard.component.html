@@ -31,7 +31,10 @@
           <td>{{ dato.producto}}</td>
           <td>{{ dato.categoria }}</td>
           <td>{{ dato.fecha }}</td>
-          <td> <button class="btn btn-danger">Delete</button> </td>
+
+          <td> <button class="btn btn-danger" 
+            (click)="eliminarProducto(dato.id)">Delete</button> </td>
+            
           <td> <button class="btn btn-primary">Edit</button> </td>
         </tr>
       </tbody>

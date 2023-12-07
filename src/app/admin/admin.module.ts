@@ -32,8 +32,11 @@ import { CerrarSessionComponent } from './components/cerrar-session/cerrar-sessi
   exports: [ 
     LoginComponent,
     DashboardComponent,
-    AgregarProductoComponent
-  
+    AgregarProductoComponent,
+    FooterAdminComponent,
+    NavAdminComponent,
+    CerrarSessionComponent,
+    
   ],  
 })
 

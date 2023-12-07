@@ -22,9 +22,22 @@ mostrarProductos(){
 }  
 
 
-agregarProductos(){}
-eliminarProductos(){}
-actualizarProductos(){}
+agregarProducto(producto: any){
+  this.MisProductos.push(producto)
+}
+
+eliminarProducto(id: number){
+  const index = this.MisProductos.findIndex(producto => 
+    producto.id === id);
+
+    if (index !== -1) {
+    this.MisProductos.splice(index, 1);
+  }
+
+}
+
+
+actualizarProductos(id: number){}
 
 
 

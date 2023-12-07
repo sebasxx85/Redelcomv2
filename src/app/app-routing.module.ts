@@ -10,16 +10,30 @@ import { PromocionesComponent } from './componentes/promociones/promociones.comp
 import { ComprarComponent } from './componentes/comprar/comprar.component';
 import { CarritoComponent } from './componentes/carrito/carrito.component';
 import { ProcesarPagoComponent } from './componentes/procesar-pago/procesar-pago.component';
+import { loginManual } from './guards/loginManual.guard';
+import { LoginGuard } from './guards/login.guard';
+import { FormRegGuard } from './guards/form-reg.guard';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
   { path: 'terminales', component: TerminalesComponent},
   { path: 'comprar', component: ComprarComponent},
   { path: 'carrito', component: CarritoComponent},
-  { path: 'promociones', component: PromocionesComponent},
+
+  //Aplicamos guards para esta ruta
+  { path: 'promociones', 
+    component: PromocionesComponent,
+    canActivate: [LoginGuard]
+  },
+
   { path: 'contacto', component: ContactoFormularioComponent},
   { path: 'ingresar', component: IngresarComponent},
-  { path: 'crear-cuenta', component: CrearCuentaComponent},
+
+  { path: 'crear-cuenta', 
+    component: CrearCuentaComponent,
+    canDeactivate: [FormRegGuard]
+  },
+
   { path: 'recuperar-password', component: RecuperarPasswordComponent},
   { path: 'procesar-pago', component: ProcesarPagoComponent},
   
