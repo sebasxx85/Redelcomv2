@@ -27,49 +27,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let dato of tusDatos">
-          <td>{{ dato.id }}</td>
-          <td>{{ dato.producto}}</td>
-          <td>{{ dato.categoria }}</td>
-          <td>{{ dato.precio}}</td>
-          <td>{{ dato.fecha }}</td>
-        
-          <td> <button class="btn btn-danger" 
-            (click)="eliminarProducto(dato.id)">Delete</button> </td>
-            
-          <td> <button class="btn btn-primary">Edit</button> </td>
-          <td>{{ Total }}</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-  <div class="tabla"></div>
-
-  <div class="container mt-4">
-    <h2>Agregar Nuevo Producto</h2>
-
-    <td> <button class="btn btn-success" (click)="crearProd()">Agregar</button>
-    </td>
-  </div>
-
-
-  <div class="container mt-4">
-    <h2 class="text-center">Mis Productos de Observable</h2>
-    <table class="table">
-      <thead>
-        <tr>
-          <th>ID</th>
-          <th>Producto</th>
-          <th>Categorías</th>
-          <th>Precio</th>
-          <th>FechaIngreso</th>
-          <th>Eliminar</th>
-          <th>Editar</th>
-          <th>Total</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr *ngFor="let dato of tusDatos">
+        <tr *ngFor="let dato of productos$ | async">
           <td>{{ dato.id }}</td>
           <td>{{ dato.producto}}</td>
           <td>{{ dato.categoria }}</td>
@@ -134,7 +92,5 @@
 
 <div class="espacio">
 </div>
-
-
 
 <app-footer-admin class="fixed-bottom"></app-footer-admin>

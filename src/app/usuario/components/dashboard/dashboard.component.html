@@ -1,0 +1,64 @@
+<app-nav-usuario class="fixed-top"></app-nav-usuario>
+
+<h1 class="text-center cabecera">Cuenta Uusario</h1>
+
+<p [ngStyle]="{'color' : color}" *ngIf="UserLogin">Usuario No autenticado</p>
+<p [ngStyle]="{'color' : color}" *ngIf="!UserLogin">Usuario autenticado</p>
+
+<div class="container2">
+  <div class="container mt-3">
+    <h2 class="text-center">Mis Productos</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Categorías</th>
+          <th>Producto</th>
+          <th>FechaIngreso</th>
+          <th>Eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let dato of MisComprasBehavior">
+          <td>{{ dato.id }}</td>
+          <td>{{ dato.producto}}</td>
+          <td>{{ dato.categoria }}</td>
+          <td>{{ dato.fecha }}</td>
+          <td> <button class="btn btn-danger" 
+            (click)="eliminarCompra(dato.id)">Delete</button> </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="tabla"></div>
+</div>
+
+<div class="container2">
+  <div class="container mt-3">
+    <h2 class="text-center">Eliminados</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Categorías</th>
+          <th>Producto</th>
+          <th>FechaIngreso</th>
+          <th>Eliminar</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let dato of MisEliminadosBehavior">
+          <td>{{ dato.id }}</td>
+          <td>{{ dato.producto}}</td>
+          <td>{{ dato.categoria }}</td>
+          <td>{{ dato.fecha }}</td>
+          <td> <button class="btn btn-danger" 
+            (click)="eliminarCompra(dato.id)">Delete</button> </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="tabla"></div>
+</div>
+
+<app-footer-usuario class="fixed-bottom"></app-footer-usuario>

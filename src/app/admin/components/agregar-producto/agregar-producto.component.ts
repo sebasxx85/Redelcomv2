@@ -21,6 +21,7 @@ export class AgregarProductoComponent {
       id: ['', Validators.required],
       producto: ['', Validators.required],
       categoria: ['', Validators.required],
+      precio: ['', Validators.required],
       fecha: ['', Validators.required],
     })
   }
@@ -30,7 +31,11 @@ export class AgregarProductoComponent {
     if (this.agregarProducto.valid) {
       const producto = this.agregarProducto.value;
       //console.log(producto);
-      this.prodServices.agregarProducto(producto)
+
+      //usando el agregar observable
+      this.prodServices.agregarProductoObs(producto)
+
+
       this.router.navigate(['/admin/dashboard'])
 
     }

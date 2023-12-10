@@ -2,15 +2,12 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
-import { AgregarProductoComponent } from './components/agregar-producto/agregar-producto.component';
 import { CerrarSessionComponent } from './components/cerrar-session/cerrar-session.component';
-import { DashboardObsComponent } from './components/dashboard-obs/dashboard-obs.component';
 
 const routes: Routes = [
     
-    { path: 'admin-login', component: LoginComponent },
-    { path: 'dashboard', component: DashboardObsComponent },
-    { path: 'agregar-producto', component: AgregarProductoComponent },
+    { path: 'usuario-login', component: LoginComponent },
+    { path: 'dashboard', component: DashboardComponent },
     { path: 'cerrar-session', component: CerrarSessionComponent },
 
 ]
@@ -18,4 +15,4 @@ const routes: Routes = [
     imports: [RouterModule.forChild(routes)],
     exports: [RouterModule]
 })
-export class AdminRoutingModule { }
+export class UsuarionRoutingModule { }

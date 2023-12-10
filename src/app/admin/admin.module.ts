@@ -9,6 +9,7 @@ import { AgregarTerminalComponent } from './components/agregar-terminal/agregar-
 import { FooterAdminComponent } from './components/footer-admin/footer-admin.component';
 import { NavAdminComponent } from './components/nav-admin/nav-admin.component';
 import { CerrarSessionComponent } from './components/cerrar-session/cerrar-session.component';
+import { DashboardObsComponent } from './components/dashboard-obs/dashboard-obs.component';
 
 
 
@@ -21,6 +22,7 @@ import { CerrarSessionComponent } from './components/cerrar-session/cerrar-sessi
     FooterAdminComponent,
     NavAdminComponent,
     CerrarSessionComponent,
+    DashboardObsComponent,
   
   ],
   imports: [
@@ -36,7 +38,7 @@ import { CerrarSessionComponent } from './components/cerrar-session/cerrar-sessi
     FooterAdminComponent,
     NavAdminComponent,
     CerrarSessionComponent,
-    
+    DashboardObsComponent,
   ],  
 })
 

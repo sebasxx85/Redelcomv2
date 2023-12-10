@@ -16,6 +16,7 @@ import { FormRegGuard } from './guards/form-reg.guard';
 
 const routes: Routes = [
   { path: '', component: HomeComponent},
+  { path: 'home', component: HomeComponent},
   { path: 'terminales', component: TerminalesComponent},
   { path: 'comprar', component: ComprarComponent},
   { path: 'carrito', component: CarritoComponent},
@@ -40,6 +41,10 @@ const routes: Routes = [
   //Rutas modulos hijos
   { path: 'admin', loadChildren: () => 
   import('./admin/admin.module').then(m => m.AdminModule) },
+
+  //Rutas modulos hijos
+  { path: 'usuario', loadChildren: () => 
+  import('./usuario/usuario.module').then(m => m.UsuarioModule) },
 
   //Esta ruta debe ir al ultimo
   { path: '**', redirectTo: '/home' },
