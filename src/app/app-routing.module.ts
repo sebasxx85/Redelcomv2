@@ -10,7 +10,6 @@ import { PromocionesComponent } from './componentes/promociones/promociones.comp
 import { ComprarComponent } from './componentes/comprar/comprar.component';
 import { CarritoComponent } from './componentes/carrito/carrito.component';
 import { ProcesarPagoComponent } from './componentes/procesar-pago/procesar-pago.component';
-import { loginManual } from './guards/loginManual.guard';
 import { LoginGuard } from './guards/login.guard';
 import { FormRegGuard } from './guards/form-reg.guard';
 

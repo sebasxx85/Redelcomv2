@@ -56,6 +56,7 @@ export class ProductosService {
       (acc, producto) => acc + producto.precio, 0)
   }
 
+
   ///////////////* USO DE OBSERVABLES*//////////////////
 
   //obtener todos los productos
@@ -88,10 +89,43 @@ export class ProductosService {
   }
 
 
-eliminarProductoObs(){}
+  //editar producto curso coder NO USAR
+  editarProductoObs(producto: any){
+    //el p es del arreglo misProductos y el producto es el que recibe como parametro
+    let indice = this.MisProductos.findIndex((p: any) => p.id = producto.id )
+    if (indice > -1) {
+      this.MisProductos[indice] = producto
+      this.productosSubject.next(this.MisProductos)
+    }
+  }
 
-actualizarProductoObs(id: number) { }
 
+   //editar producto yo
+   editarProductoObs2(id: number) {
+
+    const index = this.MisProductos.findIndex(producto =>
+      producto.id === id);
+
+    if (index > -1) {
+      this.MisProductos[index] = id
+      this.productosSubject.next(this.MisProductos)
+    }
+  }
+
+
+  eliminarProductoObs(id: number) {
+
+    const index = this.MisProductos.findIndex(producto =>
+      producto.id === id);
+
+    if (index > -1) {
+      this.MisProductos.splice(index, 1)
+      //Con esto calcula el TOTAL productos actualizados
+      this.productosSubject.next(this.MisProductos)
+      
+    }
+  }
 
 
 }
+  

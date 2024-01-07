@@ -1,0 +1,49 @@
+<app-nav-admin class="fixed-top navegacion" ></app-nav-admin>
+
+<div class="container mt-5 formCrear">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header text-center">
+            Editar Producto
+          </div>
+          <div class="card-body">
+
+            <form [formGroup]="editarProducto" (ngSubmit)="editar()">
+              <div class="mb-3">
+                <label for="id" class="form-label">Id:</label>
+                <input type="text" class="form-control" id="id" name="id" 
+                placeholder="Ingrese el Id" formControlName="id">
+              </div>
+              <div class="mb-3">
+                <label for="producto" class="form-label">Producto:</label>
+                <input type="text" class="form-control" id="producto" name="producto" 
+                placeholder="Ingrese el producto" formControlName="producto">
+              </div>
+              <div class="mb-3">
+                <label for="categoria" class="form-label">Categoria:</label>
+                <input type="text" class="form-control" id="categoria" name="categoria" 
+                placeholder="Ingrese la categoria" formControlName="categoria">
+              </div>
+              <div class="mb-3">
+                <label for="precio" class="form-label">Precio:</label>
+                <input type="text" class="form-control" id="precio" name="precio" 
+                placeholder="Ingrese el precio" formControlName="precio">
+              </div>
+              <div class="mb-3">
+                <label for="fecha" class="form-label">Fecha:</label>
+                <input type="text" class="form-control" id="fecha" name="fecha" 
+                placeholder="YYYY-MM-DD" formControlName="fecha">
+              </div>
+              <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-primary" [disabled]="editarProducto.invalid">Agregar</button>
+              </div>
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <app-footer-admin class="fixed-bottom" ></app-footer-admin>

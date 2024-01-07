@@ -10,6 +10,7 @@ import { FooterAdminComponent } from './components/footer-admin/footer-admin.com
 import { NavAdminComponent } from './components/nav-admin/nav-admin.component';
 import { CerrarSessionComponent } from './components/cerrar-session/cerrar-session.component';
 import { DashboardObsComponent } from './components/dashboard-obs/dashboard-obs.component';
+import { EdiarProductoComponent } from './components/ediar-producto/ediar-producto.component';
 
 
 
@@ -23,6 +24,7 @@ import { DashboardObsComponent } from './components/dashboard-obs/dashboard-obs.
     NavAdminComponent,
     CerrarSessionComponent,
     DashboardObsComponent,
+    EdiarProductoComponent,
   
   ],
   imports: [
@@ -39,6 +41,7 @@ import { DashboardObsComponent } from './components/dashboard-obs/dashboard-obs.
     NavAdminComponent,
     CerrarSessionComponent,
     DashboardObsComponent,
+    EdiarProductoComponent,
   ],  
 })
 

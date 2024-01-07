@@ -44,7 +44,6 @@ export class DashboardObsComponent implements OnInit {
     this.productos$.subscribe(products => {
       this.calcularTotal(products);
     });
-
   }
 
   crearProd() {
@@ -53,12 +52,20 @@ export class DashboardObsComponent implements OnInit {
     }, 2000);
   }
 
-  //Eliminar producto
+  //Boton Eliminar producto Observable
   eliminarProducto(id: number) {
-    this.productosService.eliminarProducto(id);
-  //edo actualizar el calcularTotal luego de eliminar un producto  
+    this.productosService.eliminarProductoObs(id);
+    //debo actualizar el calcularTotal luego de eliminar un producto  
     //this.calcularTotal()
   }
+
+  //Boton Editar producto Observable
+  editarProducto(id: number) {
+    setTimeout(() => {
+      this.router.navigateByUrl('admin/editar-producto');
+    }, 2000);
+  }
+
 
   //sumar productos actualizado
   calcularTotal(products: any[]): void {
@@ -67,9 +74,8 @@ export class DashboardObsComponent implements OnInit {
       .reduce((sum, price) => sum + price, 0);  // Suma los precios
   }
 
-/*recordar que se le puede pasar parametros al navigator como el id y con eso 
-    puedo enviarlo al detalle de un producto por ejemplo*/
-
+  /*recordar que se le puede pasar parametros al navigator como el id y con eso 
+      puedo enviarlo al detalle de un producto por ejemplo*/
 
 
 }

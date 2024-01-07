@@ -5,12 +5,14 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { AgregarProductoComponent } from './components/agregar-producto/agregar-producto.component';
 import { CerrarSessionComponent } from './components/cerrar-session/cerrar-session.component';
 import { DashboardObsComponent } from './components/dashboard-obs/dashboard-obs.component';
+import { EdiarProductoComponent } from './components/ediar-producto/ediar-producto.component';
 
 const routes: Routes = [
     
     { path: 'admin-login', component: LoginComponent },
     { path: 'dashboard', component: DashboardObsComponent },
     { path: 'agregar-producto', component: AgregarProductoComponent },
+    { path: 'editar-producto', component: EdiarProductoComponent },
     { path: 'cerrar-session', component: CerrarSessionComponent },
 
 ]
