@@ -6,6 +6,7 @@ import { Terminales } from 'src/app/Models/Terminales';
   templateUrl: './cabecera.component.html',
   styleUrls: ['./cabecera.component.css']
 })
+
 export class CabeceraComponent implements OnInit{
   
    //trabajando como componente hijo, recibir info del comp ingresar
@@ -19,7 +20,7 @@ export class CabeceraComponent implements OnInit{
   //creando un evento output desde hijo al padre
   @Output() eventoSalida:  EventEmitter<string> = new EventEmitter<string>()
 
-  
+
   constructor(){}
 
   ngOnInit(): void {
