@@ -19,9 +19,7 @@ export class CabeceraComponent implements OnInit{
   //creando un evento output desde hijo al padre
   @Output() eventoSalida:  EventEmitter<string> = new EventEmitter<string>()
 
-
   
-
   constructor(){}
 
   ngOnInit(): void {
